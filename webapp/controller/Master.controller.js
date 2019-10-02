@@ -29,10 +29,13 @@ sap.ui.define([
 		 * @memberOf com.delaware.BDW.trac2019.view.Master
 		 */
 		onAfterRendering: function() {
+			var self = this;
 			var oModel = this.getView().getModel();
-			oModel.read("/CustomerSet", {
+			oModel.read("/ZV_ZVT19_CUSTM_JL", {
 				success: function(oData) {
-					console.log(oData);
+					var oCustomerModel = self.getOwnerComponent().getModel("customers");
+					oCustomerModel.setData({"customers": oData.results});
+					debugger;
 				},
 				
 				error: function(error) {

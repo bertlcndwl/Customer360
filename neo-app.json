@@ -31,10 +31,10 @@
       "path": "/sap/opu/odata",
       "target": {
         "type": "destination",
-        "name": "F4C",
+        "name": "F4C_MASTER",
         "entryPath": "/sap/opu/odata"
       },
-      "description": "F4C"
+      "description": "F4C_MASTER"
     }
   ],
   "sendWelcomeFileRedirect": true

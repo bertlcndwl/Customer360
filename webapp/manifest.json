@@ -28,6 +28,13 @@
 				"settings": {
 					"localUri": "localService/ZGW_CUST_360_JDB_SRV/metadata.xml"
 				}
+			},
+			"ZV_ZVT19_CUSTM_JL_CDS": {
+				"uri": "/sap/opu/odata/sap/ZV_ZVT19_CUSTM_JL_CDS/",
+				"type": "OData",
+				"settings": {
+					"localUri": "localService/ZV_ZVT19_CUSTM_JL_CDS/metadata.xml"
+				}
 			}
 		}
 	},
@@ -88,8 +95,13 @@
 					"defaultBindingMode": "OneWay",
 					"defaultCountMode": "Request"
 				},
-				"dataSource": "ZGW_CUST_360_JDB_SRV",
+				"dataSource": "ZV_ZVT19_CUSTM_JL_CDS",
 				"preload": true
+			},
+			"customers": {
+				"type": "sap.ui.model.json.JSONModel",
+				"settings": {},
+				"preload": false
 			}
 		},
 		"resources": {
