@@ -28,9 +28,18 @@ sap.ui.define([
 		 * This hook is the same one that SAPUI5 controls get after being rendered.
 		 * @memberOf com.delaware.BDW.trac2019.view.Master
 		 */
-		//	onAfterRendering: function() {
-		//
-		//	},
+		onAfterRendering: function() {
+			var oModel = this.getView().getModel();
+			oModel.read("/CustomerSet", {
+				success: function(oData) {
+					console.log(oData);
+				},
+				
+				error: function(error) {
+					console.log(error);
+				}
+			});
+		},
 
 		/**
 		 * Called when the Controller is destroyed. Use this one to free resources and finalize activities.
