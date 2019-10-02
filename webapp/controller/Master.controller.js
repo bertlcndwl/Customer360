@@ -29,7 +29,7 @@ sap.ui.define([
 		 * @memberOf com.delaware.BDW.trac2019.view.Master
 		 */
 		onAfterRendering: function() {
-			var self = this;
+/*			var self = this;
 			var oModel = this.getView().getModel();
 			oModel.read("/ZV_ZVT19_CUSTM_JL", {
 				success: function(oData) {
@@ -41,6 +41,9 @@ sap.ui.define([
 					console.log(error);
 				}
 			});
+*/
+
+			
 		},
 
 		/**

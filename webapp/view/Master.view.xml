@@ -4,13 +4,12 @@
 		<pages>
 			<Page title="Hello SAP World">
 				<content>
-					<List id="customerList" items="{customers>/customers}">
-						<ObjectListItem title="{customers>name}">
-						<attributes>
-							<ObjectAttribute text="{Country}" />
-							<ObjectAttribute text="{customers>country}" />
-							<ObjectAttribute text="{customers>city}" />
-						</attributes>
+					<List id="customerList" items="{/ZV_ZVT19_CUSTM_JL}">
+						<ObjectListItem title="{name}">
+							<attributes>
+								<ObjectAttribute title="{i18n>country}" text="{country}" />
+								<ObjectAttribute title="{i18n>city}" text="{city}" />
+							</attributes>
 						</ObjectListItem>
 					</List>
 				</content>
