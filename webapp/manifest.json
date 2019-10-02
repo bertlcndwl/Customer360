@@ -21,6 +21,13 @@
 					"odataVersion": "2.0",
 					"localUri": "localService/metadata.xml"
 				}
+			},
+			"ZGW_CUST_360_JDB_SRV": {
+				"uri": "/sap/opu/odata/sap/ZGW_CUST_360_JDB_SRV/",
+				"type": "OData",
+				"settings": {
+					"localUri": "localService/ZGW_CUST_360_JDB_SRV/metadata.xml"
+				}
 			}
 		}
 	},
@@ -73,6 +80,16 @@
 				"type": "sap.ui.model.json.JSONModel",
 				"settings": {},
 				"preload": false
+			},
+			"": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "OneWay",
+					"defaultCountMode": "Request"
+				},
+				"dataSource": "ZGW_CUST_360_JDB_SRV",
+				"preload": true
 			}
 		},
 		"resources": {
@@ -90,11 +107,13 @@
 				"viewPath": "com.delaware.BDW.trac2019.view",
 				"controlId": "idAppControl"
 			},
-			"routes": [{
-				"name": "Master",
-				"pattern": "",
-				"target":"Master"
-			}],
+			"routes": [
+				{
+					"name": "Master",
+					"pattern": "",
+					"target": "Master"
+				}
+			],
 			"targets": {
 				"Master": {
 					"viewType": "XML",
