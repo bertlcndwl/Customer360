@@ -3,7 +3,9 @@
 	<App>
 		<pages>
 			<Page title="Title">
-				<content></content>
+				<content>
+					<Text text = "Master"/>
+				</content>
 			</Page>
 		</pages>
 	</App>
