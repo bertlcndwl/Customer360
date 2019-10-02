@@ -4,6 +4,15 @@
 		<pages>
 			<Page title="Hello SAP World">
 				<content>
+					<List id="customerList" items="{customers>/customers}">
+						<ObjectListItem title="{customers>name}">
+						<attributes>
+							<ObjectAttribute text="{Country}" />
+							<ObjectAttribute text="{customers>country}" />
+							<ObjectAttribute text="{customers>city}" />
+						</attributes>
+						</ObjectListItem>
+					</List>
 				</content>
 			</Page>
 		</pages>

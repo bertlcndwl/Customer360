@@ -35,7 +35,6 @@ sap.ui.define([
 				success: function(oData) {
 					var oCustomerModel = self.getOwnerComponent().getModel("customers");
 					oCustomerModel.setData({"customers": oData.results});
-					debugger;
 				},
 				
 				error: function(error) {
