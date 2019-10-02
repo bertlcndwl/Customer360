@@ -39,7 +39,10 @@
 			"tablet": true,
 			"phone": true
 		},
-		"supportedThemes": ["sap_hcb", "sap_belize"]
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_belize"
+		]
 	},
 	"sap.ui5": {
 		"rootView": {
@@ -73,9 +76,11 @@
 			}
 		},
 		"resources": {
-			"css": [{
-				"uri": "css/style.css"
-			}]
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
 		},
 		"routing": {
 			"config": {
@@ -85,11 +90,12 @@
 				"viewPath": "com.delaware.BDW.trac2019.view",
 				"controlId": "idAppControl"
 			},
-			"routes": [
-			
-			],
+			"routes": [],
 			"targets": {
-				
+				"Master": {
+					"viewType": "XML",
+					"viewName": "Master"
+				}
 			}
 		}
 	}
