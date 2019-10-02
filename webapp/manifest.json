@@ -99,7 +99,7 @@
 				"Master": {
 					"viewType": "XML",
 					"viewName": "Master",
-					"controlAggregation": "beginColumPages"
+					"controlAggregation": "beginColumnPages"
 				}
 			}
 		}
