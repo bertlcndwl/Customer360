@@ -90,11 +90,16 @@
 				"viewPath": "com.delaware.BDW.trac2019.view",
 				"controlId": "idAppControl"
 			},
-			"routes": [],
+			"routes": [{
+				"name": "Master",
+				"pattern": "",
+				"target":"Master"
+			}],
 			"targets": {
 				"Master": {
 					"viewType": "XML",
-					"viewName": "Master"
+					"viewName": "Master",
+					"controlAggregation": "beginColumPages"
 				}
 			}
 		}
