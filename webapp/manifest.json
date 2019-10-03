@@ -53,10 +53,7 @@
 			"tablet": true,
 			"phone": true
 		},
-		"supportedThemes": [
-			"sap_hcb",
-			"sap_belize"
-		]
+		"supportedThemes": ["sap_hcb", "sap_belize"]
 	},
 	"sap.ui5": {
 		"rootView": {
@@ -102,14 +99,22 @@
 				"type": "sap.ui.model.json.JSONModel",
 				"settings": {},
 				"preload": false
+			},
+			"ordersModel": {
+				"type": "sap.ui.model.json.JSONModel",
+				"settings": {},
+				"preload": false
+			},
+			"selectedCustomerModel": {
+				"type": "sap.ui.model.json.JSONModel",
+				"settings": {},
+				"preload": false
 			}
 		},
 		"resources": {
-			"css": [
-				{
-					"uri": "css/style.css"
-				}
-			]
+			"css": [{
+				"uri": "css/style.css"
+			}]
 		},
 		"routing": {
 			"config": {
@@ -119,18 +124,25 @@
 				"viewPath": "com.delaware.BDW.trac2019.view",
 				"controlId": "idAppControl"
 			},
-			"routes": [
-				{
-					"name": "Master",
-					"pattern": "",
-					"target": "Master"
-				}
-			],
+			"routes": [{
+				"name": "Master",
+				"pattern": "",
+				"target": "Master"
+			}, {
+				"name": "Detail",
+				"pattern": "customer/{customerID}",
+				"target": ["Master", "Detail"]
+			}],
 			"targets": {
 				"Master": {
 					"viewType": "XML",
 					"viewName": "Master",
 					"controlAggregation": "beginColumnPages"
+				},
+				"Detail": {
+					"viewType": "XML",
+					"viewName": "Detail",
+					"controlAggregation": "midColumnPages"
 				}
 			}
 		}

@@ -2,15 +2,19 @@
 	xmlns:html="http://www.w3.org/1999/xhtml">
 	<App>
 		<pages>
-			<Page title="Hello SAP World">
+			<Page title="Customers">
 				<content>
-					<List id="customerList" items="{/ZV_ZVT19_CUSTM_JL}">
-						<ObjectListItem title="{name}">
-							<attributes>
-								<ObjectAttribute title="{i18n>country}" text="{country}" />
-								<ObjectAttribute title="{i18n>city}" text="{city}" />
-							</attributes>
-						</ObjectListItem>
+					<List id="idCustomerList"
+							items="{/ZV_ZVT19_CUSTM_JL}">
+								<ObjectListItem
+									title="{name}"
+									type="Navigation"
+									press="onCustomerPress">
+									<attributes>
+										<ObjectAttribute title="{i18n>city}" text="{city}" />
+										<ObjectAttribute title="{i18n>country}" text="{country}" />
+									</attributes>
+								</ObjectListItem>
 					</List>
 				</content>
 			</Page>

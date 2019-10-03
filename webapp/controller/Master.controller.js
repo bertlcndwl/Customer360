@@ -1,5 +1,5 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller"
+	"com/delaware/BDW/trac2019/controller/BaseController"
 ], function (Controller) {
 	"use strict";
 
@@ -29,21 +29,6 @@ sap.ui.define([
 		 * @memberOf com.delaware.BDW.trac2019.view.Master
 		 */
 		onAfterRendering: function() {
-/*			var self = this;
-			var oModel = this.getView().getModel();
-			oModel.read("/ZV_ZVT19_CUSTM_JL", {
-				success: function(oData) {
-					var oCustomerModel = self.getOwnerComponent().getModel("customers");
-					oCustomerModel.setData({"customers": oData.results});
-				},
-				
-				error: function(error) {
-					console.log(error);
-				}
-			});
-*/
-
-			
 		},
 
 		/**
@@ -53,7 +38,16 @@ sap.ui.define([
 		//	onExit: function() {
 		//
 		//	}
-
+		
+		onCustomerPress: function(oEvent) {
+			var oSelectedCustomer = oEvent.getSource().getBindingContext().getObject();
+			this.getModel("selectedCustomerModel").setData(oSelectedCustomer);
+			this.getRouter().navTo("Detail", {
+				
+				customerID: oSelectedCustomer.CustomerNumber
+			});
+			this.getView().getModel("appView").setProperty("/layout", "TwoColumnsMidExpanded");
+		}
 	});
 
 });
